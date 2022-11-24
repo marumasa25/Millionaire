@@ -36,5 +36,22 @@ public class Hand {
 		}
 		return searchHand;
 	}
+	
+	public ArrayList<String> delHand(String[] delcard){
+		
+		//ゲッターのオーバーロード同様、選択されたカードをHandクラス上で検索し削除を行う
+		for(int i=0, index=0;i<delcard.length;i++) {
+			index = hand.indexOf(delcard[i]);
+			//indexの値が-1(handリスト内に該当のデータなし)の場合は処理しない
+			if(index != -1) {
+				//配列Handからindex変数の要素を削除
+				hand.remove(index);
+				//index変数を初期化
+				index = -1;
+			}
+		}
+		
+		return hand;
+	}
 }
 
