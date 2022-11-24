@@ -98,7 +98,7 @@ img {
 * :nth-child(play){
     transform: translate(x, y);
 } */
-#active {
+.active {
     transform: translate(0, -50px);
 }
 button {

@@ -45,7 +45,12 @@
 	                </div>
 	            </div>
             
-            <div class="field" id="test"></div>
+            <div class="field" id="test">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            </div>
         </div>
     </main>
 </body>
