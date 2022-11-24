@@ -42,5 +42,10 @@ public class CardClass {
 		}
 		return hand;
 	}
+	
+	//引数のcard引数と同じ文字列を引数のHandクラス内から削除する処理
+	public void CardPush(Hand hand,String[] card) {
+		hand.delHand(card);
+	} 
 }
 

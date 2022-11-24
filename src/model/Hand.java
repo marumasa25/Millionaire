@@ -1,4 +1,5 @@
 package model;
+//手札クラス
 
 import java.util.ArrayList;
 
@@ -37,6 +38,7 @@ public class Hand {
 		return searchHand;
 	}
 	
+	//カードを削除するメソッド
 	public ArrayList<String> delHand(String[] delcard){
 		
 		//ゲッターのオーバーロード同様、選択されたカードをHandクラス上で検索し削除を行う
