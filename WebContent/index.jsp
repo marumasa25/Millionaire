@@ -12,9 +12,9 @@
 	<main>
 		<h1 class="home-name">大富豪</h1>
 		<div class="btng">
-		<button class="btn" onclick="location.href='match.jsp'">対戦</button>
-		<button class="btn" onclick="location.href='file01.jsp'">ボタン1</button>
-		<button class="btn" onclick="location.href='file02.jsp'">ボタン2</button>
+		<form action="./ControllerServlet" method="post">
+			<input type="submit" class="btn" value="対戦">
+		</form>
 		</div>
 	</main>
 </body>

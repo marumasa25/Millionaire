@@ -1,42 +1,49 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="model.Hand,java.util.ArrayList"%>
+<% 
+	Hand play1 = (Hand) application.getAttribute("hand1");
+	Hand play2 = (Hand) application.getAttribute("hand2");
+	Hand play3 = (Hand) application.getAttribute("hand3");
+	Hand play4 = (Hand) application.getAttribute("hand4");
+	int index = 1;
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>対戦</title>
+<link rel="stylesheet" href="css/destyle.css">
 <link rel="stylesheet" href="css/style.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/X.X.X/jquery.min.js"></script>
 </head>
 <body class="match-back">
-	<main>
-	<p class="field">場</p>
-	<div class="hand1">
-	<div class="relative">
-		<img src="images/card.jpg">
-		<img src="images/card.jpg">
-		<img src="images/card.jpg">
-		<img src="images/card.jpg">
-		<img src="images/card.jpg">
-	</div>
-	<p>手札2</p>
-	<p>手札3</p>
-	</div>
-	<div class="hand2">
-	<p>手札1</p>
-	<p>手札2</p>
-	<p>手札3</p>
-	</div>
-	<div class="hand3">
-	<p>手札1</p>
-	<p>手札2</p>
-	<p>手札3</p>
-	</div>
-	<div class="hand4">
-	<p>手札1</p>
-	<p>手札2</p>
-	<p>手札3</p>
-	</div>
-	</main>
+	    <main>
+        <div class="board">
+            <div class="yourcard">
+	                <div class="hand">
+	                	<% for(String card:play1.getHand()){ %>
+	                		<img src="images/<%= card %>" alt="" class="hand<%= index %>">
+	                	<%index = index+1;
+	                	} %>
+	                </div>
+	            </div>
+	            <div class="rightcard">
+	                <div class="hand">
+	                    <img src="images/card.jpg" alt="" class="hand1"><img src="images/card.jpg" alt="" class="hand2"><img src="images/card.jpg" alt="" class="hand3"><img src="images/card.jpg" alt="" class="hand4"><img src="images/card.jpg" alt="" class="hand5"><img src="images/card.jpg" alt="" class="hand6"><img src="images/card.jpg" alt="" class="hand7"><img src="images/card.jpg" alt="" class="hand8"><img src="images/card.jpg" alt="" class="hand9"><img src="images/card.jpg" alt="" class="hand10"><img src="images/card.jpg" alt="" class="hand11"><img src="images/card.jpg" alt="" class="hand12"><img src="images/card.jpg" alt="" class="hand13">
+	                </div>
+	            </div>
+	            <div class="facecard">
+	                <div class="hand">
+	                    <img src="images/card.jpg" alt="" class="hand1"><img src="images/card.jpg" alt="" class="hand2"><img src="images/card.jpg" alt="" class="hand3"><img src="images/card.jpg" alt="" class="hand4"><img src="images/card.jpg" alt="" class="hand5"><img src="images/card.jpg" alt="" class="hand6"><img src="images/card.jpg" alt="" class="hand7"><img src="images/card.jpg" alt="" class="hand8"><img src="images/card.jpg" alt="" class="hand9"><img src="images/card.jpg" alt="" class="hand10"><img src="images/card.jpg" alt="" class="hand11"><img src="images/card.jpg" alt="" class="hand12"><img src="images/card.jpg" alt="" class="hand13">
+	                </div>
+	            </div>
+	            <div class="leftcard">
+	                <div class="hand">
+	                    <img src="images/card.jpg" alt="" class="hand1"><img src="images/card.jpg" alt="" class="hand2"><img src="images/card.jpg" alt="" class="hand3"><img src="images/card.jpg" alt="" class="hand4"><img src="images/card.jpg" alt="" class="hand5"><img src="images/card.jpg" alt="" class="hand6"><img src="images/card.jpg" alt="" class="hand7"><img src="images/card.jpg" alt="" class="hand8"><img src="images/card.jpg" alt="" class="hand9"><img src="images/card.jpg" alt="" class="hand10"><img src="images/card.jpg" alt="" class="hand11"><img src="images/card.jpg" alt="" class="hand12"><img src="images/card.jpg" alt="" class="hand13">
+	                </div>
+	            </div>
+            
+            <div class="field"></div>
+        </div>
+    </main>
 </body>
 </html>
