@@ -93,3 +93,25 @@ img {
     width: auto;
     height: 100px
 }
+
+/* カードプレイ時手札のアニメーション
+* :nth-child(play){
+    transform: translate(x, y);
+} */
+#active {
+    transform: translate(0, -50px);
+}
+button {
+    text-align: center;
+    background-color: black;
+    color: red;
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    top: 120%;
+    left: 75%;
+}
+.push {
+    display: none;
+    /* opacity: 0; */
+}

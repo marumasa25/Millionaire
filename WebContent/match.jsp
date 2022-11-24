@@ -14,17 +14,20 @@
 <title>対戦</title>
 <link rel="stylesheet" href="css/destyle.css">
 <link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="javascript/pushHand.js"></script>
 </head>
 <body class="match-back">
 	    <main>
         <div class="board">
+       
             <div class="yourcard">
 	                <div class="hand">
 	                	<% for(String card:play1.getHand()){ %>
-	                		<img src="images/<%= card %>" alt="" class="hand<%= index %>">
+	                		<img id="card" src="images/<%= card %>" alt="" class="hand<%= index %>" onclick="changeId()">
 	                	<%index = index+1;
 	                	} %>
 	                </div>
+	                <button onclick="pushCard(); pullCard();">卍解！</button>
 	            </div>
 	            <div class="rightcard">
 	                <div class="hand">
@@ -42,7 +45,7 @@
 	                </div>
 	            </div>
             
-            <div class="field"></div>
+            <div class="field" id="test"></div>
         </div>
     </main>
 </body>
