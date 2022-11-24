@@ -46,12 +46,17 @@ main {
     transform: translate(110px, 20vh) rotate(90deg);
 }
 .field {
-    position: relative;
+    position: absolute;
+    display: flex;
     background-color: aqua;
     width: 200px;
     height: 100px;
     top: 40%;
     left: 37.5%;
+}
+.field * {
+    position:relative;
+    margin: -20px;
 }
 .hand {
     display: flex;

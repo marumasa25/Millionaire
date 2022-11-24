@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="model.Hand,java.util.ArrayList"%>
+    pageEncoding="UTF-8" import="model.Hand,model.CardClass,java.util.ArrayList"%>
 <% 
 	Hand play1 = (Hand) application.getAttribute("hand1");
 	Hand play2 = (Hand) application.getAttribute("hand2");
@@ -46,10 +46,7 @@
 	            </div>
             
             <div class="field" id="test">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+            
             </div>
         </div>
     </main>

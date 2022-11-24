@@ -8,6 +8,11 @@ function changeId(index){//カードをクリックするとカードのimgタ�
 	console.log(card);
 	//classに'active'に変更
 	card.classList.add('active');
+	/*if(card.classList.contains('active')){
+		card.classList.remove('active');
+	}else{
+		card.classList.add('active');
+	}*/
 }
 
 function pushCard() {//ボタンクリック時の対象カードのclassに'push'を追加する関数
@@ -22,18 +27,14 @@ function pushCard() {//ボタンクリック時の対象カードのclassに'pus
 
 //以下はまだ手を付けていないため、完成していないコード
 function pullCard() {
+    var sourceImage = document.createElement(`img`),
+        imgContainer = document.getElementById("test");
+    // sourceImage.src = "images/card.jpg";
+    // imgContainer.appendChild(sourceImage);
     var active = document.getElementsByClassName('active');
-
-    var actImg;
     for(i = 0; i < active.length; i++) {
-        actImg = active[i].getAttribute('src');
-        console.log(actImg);
-        test.innerHTML = `<img src="${actImg}">`;
-    }
-    
-    /*動作について
-    JS上で「カードを場に出す動作」を行っている。
-    'active'の名前のついているimgタグの情報をフィールド上に出している。
-    */
-
+        sourceImage.src = active[i].getAttribute(`src`);
+        imgContainer.appendChild(sourceImage.cloneNode(true));
+        active[i].classList.add(`push`)
+    };
 }
