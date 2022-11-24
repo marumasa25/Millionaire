@@ -23,7 +23,7 @@
             <div class="yourcard">
 	                <div class="hand">
 	                	<% for(String card:play1.getHand()){ %>
-	                		<img id="card" src="images/<%= card %>" alt="" class="hand<%= index %>" onclick="changeId()">
+	                		<img id="card<%= index %>" src="images/<%= card %>" alt="" class="hand<%= index %>" onclick="changeId(<%= index %>)">
 	                	<%index = index+1;
 	                	} %>
 	                </div>
